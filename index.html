@@ -1,147 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keerthish Kodali | DevOps Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #1f2937;
-      --accent: #2563eb;
-      --bg: #f9f9f9;
-      --text: #333;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      scroll-behavior: smooth;
-    }
-    header {
-      height: 100vh;
-      background: linear-gradient(135deg, var(--primary), #0f172a);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 2rem;
-    }
-    header h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-    }
-    header p {
-      font-size: 1.5rem;
-      opacity: 0.9;
-      margin-top: 1rem;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 10;
-    }
-    nav a {
-      color: var(--primary);
-      text-decoration: none;
-      margin-left: 1rem;
-      font-weight: 600;
-    }
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    section {
-      margin-bottom: 4rem;
-      padding: 2rem;
-      border-radius: 1rem;
-      background: white;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-    }
-    section h2 {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    .project {
-      margin-bottom: 2rem;
-    }
-    .project h3 {
-      color: var(--accent);
-      font-size: 1.25rem;
-    }
-    .project p {
-      margin: 0.5rem 0;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      background: #e5e7eb;
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <strong>Keerthish.dev</strong>
-    <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-  <header>
-    <h1>Keerthish Kodali</h1>
-    <p>Building cloud-native, automated, and secure DevOps platforms</p>
-  </header>
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I’m Keerthish, a DevOps and Cloud Platform Engineer with 14+ years of experience automating infrastructure, CI/CD pipelines, Kubernetes deployments, and delivering secure, scalable solutions using Azure and AWS.</p>
-    </section>
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <div class="project">
-        <h3>Jenkins Shared Library CI/CD</h3>
-        <p>Reusable Groovy pipelines promoting Java microservices across all environments using GitHub, Artifactory, and Jenkins integration.</p>
-        <a href="#">View GitHub Repo</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Keerthish Kodali - Sr. DevOps & SRE Portfolio" />
+    <title>Keerthish Kodali | DevOps & SRE Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <img src="logo.png" alt="Keerthish Logo" class="nav-logo" />
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div class="project">
-        <h3>Azure Infra as Code with Terraform</h3>
-        <p>Provisioned full-stack Azure infrastructure using Terraform modules with backend state, secured secrets, and GitOps workflows.</p>
-        <a href="#">View GitHub Repo</a>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-text">
+        <h1>Keerthish Kodali</h1>
+        <p class="tagline">Sr. DevOps & Site Reliability Engineer</p>
+        <p>Specializing in Cloud Infrastructure, CI/CD Automation, and Scalable SRE Practices</p>
+        <a class="cta-button" href="#contact">Get In Touch</a>
       </div>
-      <div class="project">
-        <h3>Helm-based GitOps to AKS</h3>
-        <p>Deployed microservices to AKS via Helm charts, KP Config secrets, and GitHub-managed release flows using Jenkins pipelines.</p>
-        <a href="#">View GitHub Repo</a>
-      </div>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:keerthish@example.com">keerthish@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/keerthish" target="_blank">linkedin.com/in/keerthish</a></p>
-      <p>GitHub: <a href="https://github.com/keerthish" target="_blank">github.com/keerthish</a></p>
-    </section>
-  </main>
-  <footer>
-    &copy; 2025 Keerthish Kodali — All rights reserved.
-  </footer>
-</body>
+    </header>
+
+    <main class="main-content">
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+          I’m a results-driven DevOps/SRE Engineer with over 14 years in IT and 9+ years of hands-on expertise in cloud-native infrastructure, automation pipelines, Kubernetes operations, observability systems, and enterprise-scale delivery across Azure and AWS. Known for driving efficiency, team mentorship, and high availability across production systems.
+        </p>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Core Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">Azure / AWS / GCP</div>
+          <div class="skill-card">Terraform / Ansible / Helm</div>
+          <div class="skill-card">Jenkins / GitHub Actions / GitLab CI</div>
+          <div class="skill-card">Kubernetes / AKS / EKS</div>
+          <div class="skill-card">Prometheus / Grafana / Splunk</div>
+          <div class="skill-card">Python / Bash / Groovy</div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="job-card">
+          <h3>Kaiser Permanente <span>— DevOps Lead</span></h3>
+          <p class="duration">Apr 2018 – Present | California</p>
+          <ul>
+            <li>Built HA Jenkins CI/CD pipelines with shared libraries and multibranch strategy.</li>
+            <li>Managed Azure AKS clusters, deployed containerized apps via Helm.</li>
+            <li>Operationalized ML APIs and chatbot services using Azure App Services and Bot Framework.</li>
+            <li>Integrated Databricks, Spark pipelines, and HDInsight clusters using Ansible and Jenkins.</li>
+            <li>Reduced infra cost by 30% through Prometheus/Grafana-based optimizations.</li>
+          </ul>
+        </div>
+        <div class="job-card">
+          <h3>Align Technology <span>— Sr. DevOps Engineer</span></h3>
+          <p class="duration">May 2016 – Mar 2018 | San Jose, CA</p>
+          <ul>
+            <li>Built infrastructure on AWS using Terraform, CloudFormation, and EC2 autoscaling.</li>
+            <li>Developed custom Chef cookbooks for consistent deployments across 1000+ nodes.</li>
+            <li>Deployed multi-container apps using Docker and implemented CI pipelines.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <ul class="certs">
+          <li>AWS Certified DevOps Engineer – Professional</li>
+          <li>Prompt Engineering for ChatGPT – Vanderbilt University</li>
+          <li>Microsoft Azure Administrator (AZ-104)</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:kodalikeerthish@gmail.com">kodalikeerthish@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/keerthishkodali" target="_blank">keerthishkodali</a></p>
+        <p>Location: Pleasanton, California, USA</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Keerthish Kodali. Crafted with passion for modern DevOps & SRE excellence.</p>
+    </footer>
+  </body>
 </html>
