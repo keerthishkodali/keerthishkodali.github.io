@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keerthish Kodali | DevOps Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1f2937;
+      --accent: #2563eb;
+      --bg: #f9f9f9;
+      --text: #333;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      background: linear-gradient(135deg, var(--primary), #0f172a);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+    header p {
+      font-size: 1.5rem;
+      opacity: 0.9;
+      margin-top: 1rem;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+    nav a {
+      color: var(--primary);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 600;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 4rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+    }
+    section h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .project {
+      margin-bottom: 2rem;
+    }
+    .project h3 {
+      color: var(--accent);
+      font-size: 1.25rem;
+    }
+    .project p {
+      margin: 0.5rem 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background: #e5e7eb;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <strong>Keerthish.dev</strong>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <header>
+    <h1>Keerthish Kodali</h1>
+    <p>Building cloud-native, automated, and secure DevOps platforms</p>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I’m Keerthish, a DevOps and Cloud Platform Engineer with 14+ years of experience automating infrastructure, CI/CD pipelines, Kubernetes deployments, and delivering secure, scalable solutions using Azure and AWS.</p>
+    </section>
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project">
+        <h3>Jenkins Shared Library CI/CD</h3>
+        <p>Reusable Groovy pipelines promoting Java microservices across all environments using GitHub, Artifactory, and Jenkins integration.</p>
+        <a href="#">View GitHub Repo</a>
+      </div>
+      <div class="project">
+        <h3>Azure Infra as Code with Terraform</h3>
+        <p>Provisioned full-stack Azure infrastructure using Terraform modules with backend state, secured secrets, and GitOps workflows.</p>
+        <a href="#">View GitHub Repo</a>
+      </div>
+      <div class="project">
+        <h3>Helm-based GitOps to AKS</h3>
+        <p>Deployed microservices to AKS via Helm charts, KP Config secrets, and GitHub-managed release flows using Jenkins pipelines.</p>
+        <a href="#">View GitHub Repo</a>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:keerthish@example.com">keerthish@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/keerthish" target="_blank">linkedin.com/in/keerthish</a></p>
+      <p>GitHub: <a href="https://github.com/keerthish" target="_blank">github.com/keerthish</a></p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Keerthish Kodali — All rights reserved.
+  </footer>
+</body>
+</html>
