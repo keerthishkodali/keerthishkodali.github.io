@@ -1,99 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Keerthish Kodali - Sr. DevOps & SRE Portfolio" />
-    <title>Keerthish Kodali | DevOps & SRE Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="logo.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <img src="logo.png" alt="Keerthish Logo" class="nav-logo" />
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Personal Interests</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keerthish Kodali Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans leading-relaxed">
+  <header class="bg-white shadow-md p-6 sticky top-0 z-10">
+    <h1 class="text-4xl font-bold text-gray-800">Keerthish Kodali</h1>
+    <p class="text-md text-gray-600 mt-1">Sr. DevOps & Site Reliability Engineer | Trader | Tech Blogger</p>
+  </header>
 
-    <header class="hero">
-      <div class="hero-text">
-        <h1>Keerthish Kodali</h1>
-        <p class="tagline">Sr. DevOps & Site Reliability Engineer</p>
-        <p>Cloud-native architect, CI/CD automation expert, and production-grade reliability engineer with proven results in critical enterprise environments.</p>
-        <a class="cta-button" href="#contact">Let’s Collaborate</a>
-      </div>
-    </header>
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <!-- Professional Summary -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Professional Summary</h2>
+      <p class="text-gray-700">Senior DevOps & Platform Engineer with 14+ years of IT experience, including 9+ years in DevOps, SRE, and Cloud Automation. Skilled in CI/CD, GitOps, Kubernetes (AKS/EKS), Terraform, Jenkins, and enterprise-scale cloud solutions on Azure and AWS. Passionate about reliability, automation, and developer productivity.</p>
+    </section>
 
-    <main class="main-content">
-      <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-          I am a hands-on DevOps & Platform Engineer with over 14 years of total IT experience and 9+ years specializing in automation, infrastructure-as-code, and site reliability engineering. I take pride in creating enterprise-grade platforms that scale, heal, and secure themselves.
-        </p>
-        <p>
-          At Kaiser Permanente, I architected a full-fledged CI/CD and automation framework for 30+ critical applications across Azure, HDInsight, Databricks, and AKS. My focus spans high-availability Jenkins clusters, production AKS Helm deployments, secure secret management, SRE observability (Prometheus/Grafana), and governance automation.
-        </p>
-        <p>
-          I mentor DevOps teams, manage large-scale deployments across geographies, and continually seek to blend reliability with developer velocity. I'm now looking for senior platform roles where I can drive platform strategy and automation innovation.
-        </p>
-      </section>
-
-      <section id="skills" class="section">
-        <h2>Core Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">Azure / AWS / GCP</div>
-          <div class="skill-card">Terraform / Ansible / Helm</div>
-          <div class="skill-card">Jenkins / GitHub Actions / GitLab CI</div>
-          <div class="skill-card">Kubernetes / AKS / EKS</div>
-          <div class="skill-card">Prometheus / Grafana / Azure Monitor</div>
-          <div class="skill-card">Python / Bash / Groovy</div>
+    <!-- Skills -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Technical Skills</h2>
+      <div class="grid grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold text-gray-800">Cloud & Infrastructure</h3>
+          <ul class="mt-2 text-gray-700 list-inside list-disc">
+            <li>Azure <span class="text-yellow-500">★★★★☆</span></li>
+            <li>AWS <span class="text-yellow-500">★★★★☆</span></li>
+            <li>Kubernetes (AKS/EKS) <span class="text-yellow-500">★★★★☆</span></li>
+            <li>Terraform <span class="text-yellow-500">★★★☆☆</span></li>
+            <li>Ansible & Chef <span class="text-yellow-500">★★★★☆</span></li>
+          </ul>
         </div>
-      </section>
+        <div>
+          <h3 class="font-semibold text-gray-800">CI/CD & Automation</h3>
+          <ul class="mt-2 text-gray-700 list-inside list-disc">
+            <li>Jenkins <span class="text-yellow-500">★★★★★</span></li>
+            <li>GitHub Actions & GitLab CI <span class="text-yellow-500">★★★★☆</span></li>
+            <li>Docker & Helm <span class="text-yellow-500">★★★★☆</span></li>
+            <li>Python, Bash, Groovy <span class="text-yellow-500">★★★★☆</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">Monitoring & Logging</h3>
+          <ul class="mt-2 text-gray-700 list-inside list-disc">
+            <li>Prometheus & Grafana <span class="text-yellow-500">★★★★☆</span></li>
+            <li>Azure Monitor <span class="text-yellow-500">★★★★☆</span></li>
+            <li>Splunk & ELK <span class="text-yellow-500">★★★☆☆</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">Other Tools</h3>
+          <ul class="mt-2 text-gray-700 list-inside list-disc">
+            <li>JFrog Artifactory & Nexus</li>
+            <li>Databricks & HDInsight</li>
+            <li>Azure Bot Service & ML APIs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section id="experience" class="section">
-        <h2>Experience</h2>
-        <!-- Experience content (unchanged) -->
-      </section>
+    <!-- Work Experience -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Work Experience</h2>
+      <div class="space-y-6 text-gray-700">
+        <div>
+          <h3 class="font-semibold text-gray-800">DevOps Lead / Platform Engineer<br><span class="text-sm text-gray-600">Kaiser Permanente, Apr 2018 – Present</span></h3>
+          <ul class="list-disc list-inside mt-2">
+            <li>Led CI/CD modernization using Jenkins Shared Libraries, Groovy, and Ansible, boosting deployment velocity by 50%.</li>
+            <li>Architected and deployed AKS/EKS clusters with Terraform & Helm, integrated IRSA for secure AWS access.</li>
+            <li>Automated Airflow & RabbitMQ deployments across environments with Ansible roles.</li>
+            <li>Implemented cost optimizations by monitoring 30+ AKS namespaces and right-sizing resources with Prometheus & Grafana.</li>
+            <li>Operated HDInsight clusters with Ambari, Spark job monitoring, and scaling via Azure Portal.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">Sr. DevOps Cloud Engineer<br><span class="text-sm text-gray-600">Align Technology, May 2016 – Mar 2018</span></h3>
+          <ul class="list-disc list-inside mt-2">
+            <li>Developed reusable Terraform modules for AWS IaC; reduced provisioning time by 40%.</li>
+            <li>Automated Chef-to-Ansible migration and cloud deployments using CloudFormation & Jenkins.</li>
+            <li>Managed Docker-based deployments and LogicMonitor integration for observability.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">DevOps Engineer<br><span class="text-sm text-gray-600">Verizon Telematics, Nov 2015 – Apr 2016</span></h3>
+          <ul class="list-disc list-inside mt-2">
+            <li>Automated Oracle Middleware & SOA suite installs with Puppet, reducing manual setup time.</li>
+            <li>Created Docker pipelines and integrated Jenkins & Puppet for CI builds and deployments.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">Sr. Systems Analyst<br><span class="text-sm text-gray-600">HCL Technologies, Nov 2011 – Apr 2014</span></h3>
+          <ul class="list-disc list-inside mt-2">
+            <li>Monitored infrastructure with Tivoli, HP OpenView, and Autosys; improved uptime by 20%.</li>
+            <li>Managed backups and incident dashboards using Azure Monitoring & JIRA.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">Network Engineer & SysAdmin<br><span class="text-sm text-gray-600">Doctus Software / World Info Tech, 2009 – 2011</span></h3>
+          <ul class="list-disc list-inside mt-2">
+            <li>Built and maintained LAN, user accounts, and backups; supported Windows & UNIX environments.</li>
+            <li>Automated backups and managed AWS CloudFormation deployments.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section id="projects" class="section">
-        <h2>Personal Interests</h2>
-        <p>
-          Outside of DevOps, I’m deeply passionate about financial markets and algorithmic trading. I actively trade futures (NQ/ES), build proprietary indicators, and publish strategies for other traders. I enjoy using scripting and automation to backtest ideas and refine performance.
-        </p>
-        <p>
-          I also run two personal websites:
-        </p>
-        <ul class="certs">
-          <li><a href="https://myblogstory.com" target="_blank">MyBlogStory.com</a> — My content platform focused on trading tips, monetization strategies, and productivity hacks.</li>
-          <li><a href="https://amjobhunter.info" target="_blank">AmJobHunter.info</a> — Formerly a job board for Indian professionals, now archived as a personal portfolio project.</li>
-        </ul>
-      </section>
+    <!-- Education & Certifications -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Education & Certifications</h2>
+      <div class="space-y-4 text-gray-700">
+        <div>
+          <h3 class="font-semibold text-gray-800">Master’s in Computer Science<br><span class="text-sm text-gray-600">San Francisco Bay University, 2015</span></h3>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">Bachelor’s in Computer Science Engineering<br><span class="text-sm text-gray-600">Jawaharlal Nehru University, 2009</span></h3>
+        </div>
+        <div>
+          <h3 class="font-semibold text-gray-800">Certifications:</h3>
+          <ul class="list-disc list-inside mt-2">
+            <li>AWS Certified DevOps Engineer – Professional (June 2025)</li>
+            <li>Prompt Engineering for ChatGPT, Vanderbilt University (Jan 2025)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section id="certifications" class="section">
-        <h2>Certifications</h2>
-        <!-- Certification content (unchanged) -->
-      </section>
+    <!-- Projects & Contributions -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Projects & Contributions</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Deployed model inference APIs for chatbots using Azure Bot Services and ML model integration.</li>
+        <li>Built TradingView indicators for prop firm risk management and multi-timeframe analysis.</li>
+        <li>Integrated GitOps workflows with GitLab CI and GitHub Actions shared workflows.</li>
+        <li>Automated Jenkins-triggered Azure DataBricks deployment pipelines.</li>
+      </ul>
+    </section>
 
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:kodalikeerthish@gmail.com">kodalikeerthish@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/keerthishkodali" target="_blank">keerthishkodali</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/keerthish-kodali/" target="_blank">keerthish-kodali</a></p>
-        <p>Location: Pleasanton, California, USA</p>
-      </section>
-    </main>
+    <!-- Trading & Blogging -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Trading & Tech Blogging</h2>
+      <p class="text-gray-700">Active futures trader (NQ/ES scalping) and creator of premium TradingView indicators. Sharing strategies on my blog: <a href="https://myblogstory.com" target="_blank" class="text-blue-600 hover:underline">MyBlogStory.com</a>.</p>
+    </section>
 
-    <footer class="footer">
-      <p>&copy; 2025 Keerthish Kodali. Built with code and passion — DevOps by day, Trading by night.</p>
-    </footer>
-  </body>
+    <!-- Websites & Links -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Websites & Links</h2>
+      <ul class="list-disc list-inside text-blue-600">
+        <li><a href="https://myblogstory.com" target="_blank">MyBlogStory.com</a></li>
+        <li><a href="https://amjobhunter.info" target="_blank">AmJobHunter.info</a></li>
+        <li><a href="https://github.com/keerthishkodali" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/keerthish" target="_blank">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-2">Contact</h2>
+      <p class="text-gray-700">📧 <a href="mailto:kodalikeerthish@gmail.com" class="text-blue-600 hover:underline">kodalikeerthish@gmail.com</a></p>
+      <p class="text-gray-700">📱 +1 (678)-796-6143</p>
+    </section>
+  </main>
+
+  <footer class="text-center text-gray-500 text-sm p-4 border-t mt-12">
+    © <script>document.write(new Date().getFullYear())</script> Keerthish Kodali. All rights reserved.
+  </footer>
+</body>
 </html>
