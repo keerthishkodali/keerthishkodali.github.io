@@ -44,11 +44,21 @@
 
   <!-- Header -->
   <header class="bg-blue-600 text-white p-6 sticky top-0 z-40 shadow-lg">
-    <div class="max-w-5xl mx-auto flex items-center space-x-4">
-      <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1">
-      <div>
-        <h1 class="text-3xl font-bold">Keerthish Kodali</h1>
-        <p class="text-sm">Sr. DevOps Lead | Cloud &amp; Site Reliability Engineer | Trader | Tech Blogger</p>
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <!-- Left: Logo + Name -->
+      <div class="flex items-center space-x-4">
+        <img src="logo.png" alt="Logo" class="w-14 h-14 rounded-full bg-white p-1 shadow" />
+        <div>
+          <h1 class="text-3xl font-bold">Keerthish Kodali</h1>
+          <p class="text-sm">Sr. DevOps Lead | Cloud & Site Reliability Engineer | Trader | Tech Blogger</p>
+        </div>
+      </div>
+
+      <!-- Right: Resume Button -->
+      <div class="flex-shrink-0">
+        <a href="resume.html" class="bg-white text-blue-700 px-4 py-2 rounded shadow hover:bg-gray-100 text-sm font-medium transition">
+          📄 View Resume
+        </a>
       </div>
     </div>
   </header>
@@ -254,7 +264,7 @@
             <h4 class="text-lg font-semibold text-blue-600 mb-2">Social &amp; Repos</h4>
             <ul class="list-disc list-inside text-gray-700 space-y-1">
               <li><a href="https://github.com/keerthishkodali" class="text-blue-600 hover:underline" target="_blank">GitHub</a></li>
-              <li><a href="https://linkedin.com/in/keerthish" class="text-blue-600 hover:underline" target="_blank">LinkedIn</a></li>
+              <li><a href="https://linkedin.com/in/keerthishkodali" class="text-blue-600 hover:underline" target="_blank">LinkedIn</a></li>
               <li><a href="https://medium.com/@kodalikeerthish" class="text-blue-600 hover:underline" target="_blank">Medium</a></li>
               <li><a href="https://instagram.com/keerthishkodali" class="text-blue-600 hover:underline" target="_blank">Instagram</a></li>
               <li><a href="https://facebook.com/thesunnycupid" class="text-blue-600 hover:underline" target="_blank">Facebook</a></li>
@@ -270,7 +280,7 @@
   <footer class="text-center text-gray-500 text-sm p-4 border-t mt-12">
     © <script>document.write(new Date().getFullYear())</script> Keerthish Kodali. All rights reserved.
   </footer>
-  
+
  <!-- Splash Script with Analytics -->
   <script>
     window.addEventListener('load', () => {
