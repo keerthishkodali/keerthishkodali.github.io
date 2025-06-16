@@ -2,179 +2,293 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Keerthish Kodali Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes splashIn {
+      0%   { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes splashOut {
+      0%   { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0); opacity: 0; }
+    }
+
+    #splash {
+      background-color: #fdf4e3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+    }
+
+    .animate-splash-in {
+      animation: splashIn 0.8s ease-out forwards;
+    }
+
+    .animate-splash-out {
+      animation: splashOut 0.6s ease-in forwards;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 font-sans leading-relaxed text-gray-800">
-  <!-- Logo and Header -->
-  <header class="bg-blue-600 text-white p-6 sticky top-0 z-10 shadow-lg">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <div class="flex items-center space-x-4">
-        <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1" />
-        <div>
-          <h1 class="text-3xl font-bold">Keerthish Kodali</h1> 
-          <p class="text-sm">Sr. DevOps Lead | Cloud & Site Reliability Engineer | Trader | Tech Blogger</p>
-        </div>
+
+  <!-- Splash -->
+  <div id="splash" class="fixed inset-0 flex items-center justify-center z-50">
+    <img src="logo.png" alt="Logo" class="w-58 h-58 drop-shadow-2xl" />
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-6 sticky top-0 z-40 shadow-lg">
+    <div class="max-w-5xl mx-auto flex items-center space-x-4">
+      <img src="logo.png" alt="Logo" class="w-12 h-12 rounded-full bg-white p-1">
+      <div>
+        <h1 class="text-3xl font-bold">Keerthish Kodali</h1>
+        <p class="text-sm">Sr. DevOps Lead | Cloud &amp; Site Reliability Engineer | Trader | Tech Blogger</p>
       </div>
     </div>
   </header>
 
+  <!-- Main Content -->
   <main class="max-w-5xl mx-auto p-6 space-y-12">
+
     <!-- Professional Summary -->
-    <section class="bg-white p-6 rounded-lg shadow-sm">
+    <section id="summary" class="bg-white p-6 rounded-lg shadow-sm scroll-mt-24">
       <h2 class="text-2xl font-semibold text-blue-600 mb-2">Professional Summary</h2>
-      <p>Senior DevOps & Platform Engineer with 14+ years of IT experience, including 9+ years in DevOps, SRE, and Cloud Automation. Skilled in CI/CD, GitOps, Kubernetes (AKS/EKS), Terraform, Jenkins, and enterprise-scale cloud solutions on Azure and AWS. Passionate about reliability, automation, and developer productivity.</p>
+      <p>Senior DevOps &amp; Platform Engineer with 14+ years of IT experience, including 9+ years in DevOps, SRE, and Cloud Automation. Skilled in CI/CD, GitOps, Kubernetes (AKS/EKS), Terraform, Jenkins, and enterprise-scale cloud solutions on Azure and AWS. Passionate about reliability, automation, and developer productivity. Also a futures trader and TradingView Pine Script developer, creating advanced indicators for risk management and multi-timeframe analysis.</p>
     </section>
 
     <!-- Skills -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section id="skills" class="grid grid-cols-1 md:grid-cols-2 gap-6 scroll-mt-24">
       <div class="bg-white p-6 rounded-lg shadow-sm">
-        <h2 class="text-2xl font-semibold text-blue-600 mb-4">Technical Skills</h2>
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <h3 class="font-semibold">Cloud & Infra</h3>
-            <ul class="mt-2 list-disc list-inside text-gray-700">
-              <li>Azure <span class="text-yellow-500">★★★★☆</span></li>
-              <li>AWS <span class="text-yellow-500">★★★★☆</span></li>
-              <li>Kubernetes <span class="text-yellow-500">★★★★☆</span></li>
-              <li>Terraform <span class="text-yellow-500">★★★☆☆</span></li>
-              <li>Ansible & Chef <span class="text-yellow-500">★★★★☆</span></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold">CI/CD & Automation</h3>
-            <ul class="mt-2 list-disc list-inside text-gray-700">
-              <li>Jenkins <span class="text-yellow-500">★★★★★</span></li>
-              <li>GitHub Actions <span class="text-yellow-500">★★★★☆</span></li>
-              <li>Docker & Helm <span class="text-yellow-500">★★★★☆</span></li>
-              <li>Python, Bash, Groovy <span class="text-yellow-500">★★★★☆</span></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold">Monitoring & Logging</h3>
-            <ul class="mt-2 list-disc list-inside text-gray-700">
-              <li>Prometheus & Grafana <span class="text-yellow-500">★★★★☆</span></li>
-              <li>Azure Monitor <span class="text-yellow-500">★★★★☆</span></li>
-              <li>Splunk & ELK <span class="text-yellow-500">★★★☆☆</span></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold">Tools & Other</h3>
-            <ul class="mt-2 list-disc list-inside text-gray-700">
-              <li>JFrog Artifactory & Nexus</li>
-              <li>Databricks & HDInsight</li>
-              <li>Azure Bot Service & ML APIs</li>
-            </ul>
-          </div>
-        </div>
+        <h3 class="text-xl font-semibold text-blue-600 mb-4">Cloud &amp; Infrastructure</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Azure (AKS, Functions, DevOps) <span class="text-yellow-500">★★★★☆</span></li>
+          <li>AWS (EKS, EC2, VPC, IAM, ALB/NLB) <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Kubernetes internals &amp; Helm chart authoring <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Terraform &amp; ARM/CloudFormation <span class="text-yellow-500">★★★☆☆</span></li>
+          <li>Ansible &amp; Chef <span class="text-yellow-500">★★★★☆</span></li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-blue-600 mb-4">Monitoring &amp; Logging</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Prometheus &amp; Grafana dashboards &amp; alerts <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Azure Monitor &amp; Application Insights <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Splunk Cloud &amp; ELK Stack <span class="text-yellow-500">★★★☆☆</span></li>
+          <li>Datadog (familiarity) <span class="text-yellow-500">★★★☆☆</span></li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-blue-600 mb-4">CI/CD &amp; Automation</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Jenkins (Shared Libraries, multibranch pipelines) <span class="text-yellow-500">★★★★★</span></li>
+          <li>GitHub Actions &amp; GitLab CI/CD &amp; GitOps (ArgoCD) <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Docker &amp; Docker Compose <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Microservice deployments on Azure &amp; AWS <span class="text-yellow-500">★★★★☆</span></li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-blue-600 mb-4">Tools &amp; Other</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>JFrog Artifactory &amp; Nexus <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Databricks &amp; HDInsight <span class="text-yellow-500">★★★☆☆</span></li>
+          <li>Azure Bot Service &amp; ML API integration <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Apache Airflow &amp; RabbitMQ <span class="text-yellow-500">★★★★☆</span></li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-blue-600 mb-4">Infrastructure &amp; Networking</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>VNets, Subnets &amp; Peering <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Load Balancers &amp; Ingress Controllers <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Firewall &amp; Security Groups <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Azure Redis &amp; Cosmos DB <span class="text-yellow-500">★★★☆☆</span></li>
+        </ul>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <h3 class="text-xl font-semibold text-blue-600 mb-4">Programming &amp; Scripting</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Python, Bash &amp; PowerShell scripting <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Groovy for Jenkins pipelines <span class="text-yellow-500">★★★★☆</span></li>
+          <li>Ruby for Chef cookbooks <span class="text-yellow-500">★★★☆☆</span></li>
+          <li>SQL (PostgreSQL, MongoDB queries) <span class="text-yellow-500">★★★★☆</span></li>
+        </ul>
       </div>
     </section>
 
     <!-- Work Experience -->
-    <section class="space-y-6">
+    <section id="experience" class="space-y-8 scroll-mt-24">
       <h2 class="text-2xl font-semibold text-blue-600">Work Experience</h2>
-      <div class="space-y-4">
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="font-semibold text-gray-800">DevOps Lead / Platform Engineer <span class="text-sm text-gray-600">(Kaiser Permanente, Apr 2018 – Present)</span></h3>
-          <ul class="list-disc list-inside mt-2 text-gray-700">
-            <li>Led CI/CD modernization using Jenkins Shared Libraries, boosting deployment velocity by 50%.</li>
-            <li>Architected AKS/EKS clusters with Terraform & Helm; integrated IRSA for AWS security.</li>
-            <li>Automated Airflow & RabbitMQ deployments with Ansible roles.</li>
-            <li>Optimized costs via Prometheus & Grafana monitoring of 30+ AKS namespaces.</li>
-            <li>Managed HDInsight clusters; monitored Spark/YARN with Ambari and Autoscale.</li>
-          </ul>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-bold text-gray-800">Kaiser Permanente</h3>
+          <span class="text-gray-500 italic">Apr 2018 – Present</span>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="font-semibold text-gray-800">Sr. DevOps Cloud Engineer <span class="text-sm text-gray-600">(Align Technology, May 2016 – Mar 2018)</span></h3>
-          <ul class="list-disc list-inside mt-2 text-gray-700">
-            <li>Built Terraform modules for AWS; reduced provisioning time by 40%.</li>
-            <li>Migrated Chef to Ansible; automated CloudFormation & Jenkins pipelines.</li>
-            <li>Integrated Docker deployments and LogicMonitor for observability.</li>
-          </ul>
+        <p class="text-gray-700 italic mb-2">DevOps Lead / Platform Engineer</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Led CI/CD modernization using Jenkins Shared Libraries, boosting deployment velocity by 50%.</li>
+          <li>Architected AKS/EKS clusters with Terraform &amp; Helm; integrated IRSA for AWS security.</li>
+          <li>Automated Airflow &amp; RabbitMQ deployments with Ansible roles.</li>
+          <li>Optimized costs via Prometheus &amp; Grafana monitoring of 30+ AKS namespaces.</li>
+          <li>Managed HDInsight clusters; monitored Spark/YARN with Ambari and Autoscale.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-bold text-gray-800">Align Technology</h3>
+          <span class="text-gray-500 italic">May 2016 – Mar 2018</span>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="font-semibold text-gray-800">DevOps Engineer <span class="text-sm text-gray-600">(Verizon Telematics, Nov 2015 – Apr 2016)</span></h3>
-          <ul class="list-disc list-inside mt-2 text-gray-700">
-            <li>Automated Oracle Middleware installs with Puppet, reducing setup time.</li>
-            <li>Built Docker pipelines; integrated Jenkins & Puppet CI pipelines.</li>
-          </ul>
+        <p class="text-gray-700 italic mb-2">Sr. DevOps Cloud Engineer</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Built Terraform modules for AWS; reduced provisioning time by 40%.</li>
+          <li>Migrated Chef to Ansible; automated CloudFormation &amp; Jenkins pipelines.</li>
+          <li>Integrated Docker deployments and LogicMonitor for observability.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-bold text-gray-800">Verizon Telematics</h3>
+          <span class="text-gray-500 italic">Nov 2015 – Apr 2016</span>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="font-semibold text-gray-800">Sr. Systems Analyst <span class="text-sm text-gray-600">(HCL Technologies, 2011 – 2014)</span></h3>
-          <ul class="list-disc list-inside mt-2 text-gray-700">
-            <li>Monitored infrastructure with Tivoli & HP OpenView; improved uptime by 20%.</li>
-            <li>Managed backups & incidents via Azure Monitor & JIRA dashboards.</li>
-          </ul>
+        <p class="text-gray-700 italic mb-2">DevOps Engineer</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Automated Oracle Middleware installs with Puppet, reducing setup time.</li>
+          <li>Built Docker pipelines; integrated Jenkins &amp; Puppet CI pipelines.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-bold text-gray-800">HCL Technologies</h3>
+          <span class="text-gray-500 italic">2011 – 2014</span>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-sm">
-          <h3 class="font-semibold text-gray-800">Network Engineer & SysAdmin <span class="text-sm text-gray-600">(Doctus / World Info Tech, 2009 – 2011)</span></h3>
-          <ul class="list-disc list-inside mt-2 text-gray-700">
-            <li>Built LANs, user accounts, backups; automated AWS CloudFormation tasks.</li>
-          </ul>
+        <p class="text-gray-700 italic mb-2">Sr. Systems Analyst</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Monitored infrastructure with Tivoli &amp; HP OpenView; improved uptime by 20%.</li>
+          <li>Managed backups &amp; incidents via Azure Monitor &amp; JIRA dashboards.</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-xl font-bold text-gray-800">Doctus / World Info Tech</h3>
+          <span class="text-gray-500 italic">2009 – 2011</span>
         </div>
+        <p class="text-gray-700 italic mb-2">Network Engineer &amp; SysAdmin</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Built LANs, user accounts, backups; automated AWS CloudFormation tasks.</li>
+        </ul>
       </div>
     </section>
 
     <!-- Education & Certifications -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-lg shadow-sm">
+    <section id="education" class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-lg shadow-sm scroll-mt-24">
       <div>
         <h2 class="text-2xl font-semibold text-blue-600 mb-2">Education</h2>
-        <ul class="list-disc list-inside text-gray-700">
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
           <li>Master’s in Computer Science, San Francisco Bay University (2015)</li>
           <li>Bachelor’s in Computer Science Engineering, Jawaharlal Nehru University (2009)</li>
         </ul>
       </div>
       <div>
         <h2 class="text-2xl font-semibold text-blue-600 mb-2">Certifications</h2>
-        <ul class="list-disc list-inside text-gray-700">
-          <li>AWS Certified DevOps Engineer – Professional (June 2025)</li> <img src="AWS.png" alt="Logo" class="w-12 h-12" />
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>AWS Certified DevOps Engineer – Professional (June 2025) <img src="AWS.png" alt="AWS Logo" class="inline-block w-6 h-6 ml-2"></li>
           <li>Prompt Engineering for ChatGPT, Vanderbilt University (Jan 2025)</li>
         </ul>
       </div>
     </section>
 
     <!-- Projects & Contributions -->
-    <section class="bg-white p-6 rounded-lg shadow-sm">
-      <h2 class="text-2xl font-semibold text-blue-600 mb-2">Projects & Contributions</h2>
-      <ul class="list-disc list-inside text-gray-700">
-        <li>Deployed model inference APIs for chatbots using Azure Bot Service & ML integration.</li>
-        <li>Created TradingView indicators for prop firm risk management & multi-timeframe analysis.</li>
-        <li>Implementing GitOps with GitLab CI & GitHub Actions shared workflows.</li>
+    <section id="projects" class="bg-white p-6 rounded-lg shadow-sm scroll-mt-24">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">Projects &amp; Contributions</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <li>Deployed model inference APIs for chatbots using Azure Bot Service &amp; ML integration.</li>
+        <li>Created TradingView indicators for prop firm risk management &amp; multi-timeframe analysis.</li>
+        <li>Implementing GitOps with GitLab CI &amp; GitHub Actions shared workflows.</li>
         <li>Automated Jenkins-driven Azure DataBricks deployments.</li>
       </ul>
     </section>
 
-    <!-- Trading & Blogging -->
-    <section class="bg-blue-50 p-6 rounded-lg shadow-sm">
-      <h2 class="text-2xl font-semibold text-blue-600 mb-2">Trading & Tech Blogging</h2>
-      <p class="text-gray-700">Futures trader (NQ/ES scalping) and TradingView indicator creator. Insights & tutorials on <a href="https://myblogstory.com" class="text-blue-600 underline">MyBlogStory.com</a>.</p>
+    <!-- Outside of Work & Side Projects -->
+    <section id="outside-work" class="bg-white p-6 rounded-lg shadow-sm scroll-mt-24">
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">Outside of Work &amp; Side Projects</h2>
+
+      <!-- Trading Indicator Contributions -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Trading Indicator Contributions</h3>
+        <p class="text-gray-700 mb-4">High-impact Pine Script indicators tailored for prop-firm traders and scalpers, addressing risk control and multi-timeframe confluence.</p>
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>Prop Firm Guard: Risk &amp; Sizing Tracker</li>
+          <li>Multi-Timeframe RSI &amp; MACD Table</li>
+          <li>Fair Value Gaps &amp; Order-Block Overlays</li>
+        </ul>
+      </div>
+
+      <!-- Trading & Blogging -->
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Trading &amp; Blogging</h3>
+        <p class="text-gray-700">Futures trader specializing in NQ/ES scalping strategies. Insights &amp; tutorials at <a href="https://myblogstory.com" class="text-blue-600 underline" target="_blank">MyBlogStory.com</a>.</p>
+      </div>
+
+      <!-- Websites & Socials -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-gray-800 mb-4">Websites &amp; Socials</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 class="text-lg font-semibold text-blue-600 mb-2">Websites</h4>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li><a href="https://myblogstory.com" class="text-blue-600 hover:underline" target="_blank">MyBlogStory.com</a></li>
+              <li><a href="https://amjobhunter.info" class="text-blue-600 hover:underline" target="_blank">AmJobHunter.info</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-blue-600 mb-2">Social &amp; Repos</h4>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li><a href="https://github.com/keerthishkodali" class="text-blue-600 hover:underline" target="_blank">GitHub</a></li>
+              <li><a href="https://linkedin.com/in/keerthish" class="text-blue-600 hover:underline" target="_blank">LinkedIn</a></li>
+              <li><a href="https://medium.com/@kodalikeerthish" class="text-blue-600 hover:underline" target="_blank">Medium</a></li>
+              <li><a href="https://instagram.com/keerthishkodali" class="text-blue-600 hover:underline" target="_blank">Instagram</a></li>
+              <li><a href="https://facebook.com/thesunnycupid" class="text-blue-600 hover:underline" target="_blank">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Websites & Links -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-lg shadow-sm">
-      <div>
-        <h2 class="text-2xl font-semibold text-blue-600 mb-2">Websites</h2>
-        <ul class="list-disc list-inside text-blue-600">
-          <li><a href="https://myblogstory.com" target="_blank">MyBlogStory.com</a></li>
-          <li><a href="https://amjobhunter.info" target="_blank">AmJobHunter.info</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="text-2xl font-semibold text-blue-600 mb-2">Social & Repos</h2>
-        <ul class="list-disc list-inside text-blue-600">
-          <li><a href="https://github.com/keerthishkodali" target="_blank">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/keerthish" target="_blank">LinkedIn</a></li>
-          <li><a href="https://medium.com/@kodalikeerthish" target="_blank">Medium</a></li>
-          <li><a href="https://instagram.com/keerthishkodali" target="_blank">Instagram</a></li>
-          <li><a href="https://facebook.com/thesunnycupid" target="_blank">FaceBook</a></li>
-        </ul>
-      </div>
-    </section>
   </main>
 
+  <!-- Footer -->
   <footer class="text-center text-gray-500 text-sm p-4 border-t mt-12">
     © <script>document.write(new Date().getFullYear())</script> Keerthish Kodali. All rights reserved.
   </footer>
+  
+ <!-- Splash Script with Analytics -->
+  <script>
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('splash');
+      splash.classList.add('animate-splash-in');
+
+      splash.addEventListener('animationend', e => {
+        if (e.animationName === 'splashIn') {
+          setTimeout(() => {
+            splash.classList.replace('animate-splash-in', 'animate-splash-out');
+          }, 1200); // Delay before disappearing
+        } else if (e.animationName === 'splashOut') {
+          splash.remove(); // Remove from DOM after fade out
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
+```
