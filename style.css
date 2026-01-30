@@ -1,160 +1,467 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keerthish Kodali Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <img src="logo.png" alt="Logo" class="nav-logo" />
-      <ul class="nav-links">
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+/* ====== Base ====== */
+:root{
+  --bg: #070A12;
+  --panel: rgba(255,255,255,0.06);
+  --panel2: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.10);
+  --text: #EAF0FF;
+  --muted: rgba(234,240,255,0.72);
+  --muted2: rgba(234,240,255,0.58);
+  --accent: #4F8CFF;
+  --accent2:#7C5CFF;
+  --good:#39d98a;
+  --shadow: 0 18px 60px rgba(0,0,0,0.45);
+  --shadow2: 0 10px 30px rgba(0,0,0,0.35);
+  --radius: 18px;
+}
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Keerthish Kodali</h1>
-    <p class="tagline">Senior DevOps & Site Reliability Engineer | Trader | Tech Blogger</p>
-    <a href="#contact" class="cta-button">Get In Touch</a>
-  </section>
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: radial-gradient(1100px 600px at 20% -10%, rgba(79,140,255,0.35), transparent 55%),
+              radial-gradient(800px 600px at 85% 10%, rgba(124,92,255,0.28), transparent 55%),
+              radial-gradient(900px 700px at 50% 120%, rgba(57,217,138,0.14), transparent 55%),
+              var(--bg);
+  color: var(--text);
+}
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <!-- Summary -->
-    <section id="summary" class="section">
-      <h2>Professional Summary</h2>
-      <p>Senior DevOps & Platform Engineer with 14+ years of IT experience, including 9+ years in DevOps, SRE, and Cloud Automation. Skilled in CI/CD, GitOps, Kubernetes (AKS/EKS), Terraform, Jenkins, and enterprise-scale cloud solutions on Azure and AWS. Passionate about reliability, automation, and developer productivity.</p>
-    </section>
+a{ color: var(--accent); text-decoration: none; }
+a:hover{ opacity: 0.95; text-decoration: underline; }
 
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <h2>Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">Azure ★★★★☆</div>
-        <div class="skill-card">AWS ★★★★☆</div>
-        <div class="skill-card">Kubernetes ★★★★☆</div>
-        <div class="skill-card">Terraform ★★★☆☆</div>
-        <div class="skill-card">Jenkins ★★★★★</div>
-        <div class="skill-card">GitHub Actions ★★★★☆</div>
-        <div class="skill-card">Docker & Helm ★★★★☆</div>
-        <div class="skill-card">Ansible & Chef ★★★★☆</div>
-        <div class="skill-card">Prometheus & Grafana ★★★★☆</div>
-        <div class="skill-card">Azure Monitor ★★★★☆</div>
-        <div class="skill-card">Python, Bash, Groovy ★★★★☆</div>
-        <div class="skill-card">Splunk & ELK ★★★☆☆</div>
-      </div>
-    </section>
+/* ====== Navbar ====== */
+.navbar{
+  position: sticky; top:0; z-index: 50;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(7,10,18,0.60);
+  border-bottom: 1px solid var(--border);
+}
 
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <h2>Work Experience</h2>
-      <div class="job-card">
-        <h3>DevOps Lead / Platform Engineer <span class="duration">Kaiser Permanente, Apr 2018 – Present</span></h3>
-        <ul>
-          <li>Led CI/CD modernization using Jenkins Shared Libraries, boosting deployment velocity by 50%.</li>
-          <li>Architected AKS/EKS clusters with Terraform & Helm; integrated IRSA for AWS security.</li>
-          <li>Automated Airflow & RabbitMQ deployments with Ansible roles.</li>
-          <li>Optimized costs via Prometheus & Grafana monitoring of 30+ AKS namespaces.</li>
-          <li>Managed HDInsight clusters; monitored Spark/YARN with Ambari and autoscaling.</li>
-        </ul>
-      </div>
-      <div class="job-card">
-        <h3>Sr. DevOps Cloud Engineer <span class="duration">Align Technology, May 2016 – Mar 2018</span></h3>
-        <ul>
-          <li>Built Terraform modules for AWS; reduced provisioning time by 40%.</li>
-          <li>Migrated Chef to Ansible; automated CloudFormation & Jenkins pipelines.</li>
-          <li>Integrated Docker deployments and LogicMonitor for observability.</li>
-        </ul>
-      </div>
-      <div class="job-card">
-        <h3>DevOps Engineer <span class="duration">Verizon Telematics, Nov 2015 – Apr 2016</span></h3>
-        <ul>
-          <li>Automated Oracle Middleware installs with Puppet, reducing setup time.</li>
-          <li>Built Docker pipelines; integrated Jenkins & Puppet CI pipelines.</li>
-        </ul>
-      </div>
-      <div class="job-card">
-        <h3>Sr. Systems Analyst <span class="duration">HCL Technologies, 2011 – 2014</span></h3>
-        <ul>
-          <li>Monitored infrastructure with Tivoli & HP OpenView; improved uptime by 20%.</li>
-          <li>Managed backups & incidents via Azure Monitor & JIRA dashboards.</li>
-        </ul>
-      </div>
-      <div class="job-card">
-        <h3>Network Engineer & SysAdmin <span class="duration">Doctus / World Info Tech, 2009 – 2011</span></h3>
-        <ul>
-          <li>Built LANs, user accounts, backups; automated AWS CloudFormation tasks.</li>
-        </ul>
-      </div>
-    </section>
+.nav-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+}
 
-    <!-- Education & Certifications -->
-    <section id="education" class="section">
-      <h2>Education & Certifications</h2>
-      <div class="job-card">
-        <h3>Master’s in Computer Science <span class="duration">San Francisco Bay University, 2015</span></h3>
-      </div>
-      <div class="job-card">
-        <h3>Bachelor’s in Computer Science Engineering <span class="duration">Jawaharlal Nehru University, 2009</span></h3>
-      </div>
-      <h3>Certifications</h3>
-      <ul class="certs">
-        <li>AWS Certified DevOps Engineer – Professional (June 2025)</li>
-        <li>Prompt Engineering for ChatGPT, Vanderbilt University (Jan 2025)</li>
-      </ul>
-    </section>
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  min-width: 240px;
+}
+.nav-logo{
+  width:44px; height:44px;
+  border-radius: 14px;
+  padding: 6px;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+.brand-text{ line-height: 1.1; }
+.brand-name{
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+.brand-role{
+  font-size: 12px;
+  color: var(--muted2);
+  margin-top: 3px;
+}
 
-    <!-- Projects & Contributions -->
-    <section id="projects" class="section">
-      <h2>Projects & Contributions</h2>
-      <ul>
-        <li>Deployed model inference APIs for chatbots using Azure Bot Service & ML integration.</li>
-        <li>Created TradingView indicators for prop firm risk management & multi-timeframe analysis.</li>
-        <li>Implemented GitOps with GitLab CI & GitHub Actions shared workflows.</li>
-        <li>Automated Jenkins-driven Azure DataBricks deployments.</li>
-      </ul>
-    </section>
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap: 12px;
+  padding:0; margin:0;
+  align-items:center;
+}
+.nav-links a{
+  display:inline-flex;
+  padding: 8px 10px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid transparent;
+}
+.nav-links a:hover{
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.08);
+  text-decoration:none;
+  color: var(--text);
+}
+.nav-cta{
+  background: linear-gradient(135deg, rgba(79,140,255,0.85), rgba(124,92,255,0.75));
+  color: white !important;
+  box-shadow: 0 10px 24px rgba(79,140,255,0.20);
+}
+.nav-cta:hover{
+  filter: brightness(1.06);
+}
 
-    <!-- Trading & Blogging -->
-    <section id="blog" class="section">
-      <h2>Trading & Tech Blogging</h2>
-      <p>Futures trader (NQ/ES scalping) and TradingView indicator creator. Insights & tutorials on <a href="https://myblogstory.com">MyBlogStory.com</a>.</p>
-    </section>
+/* Mobile toggle */
+.nav-toggle{
+  display:none;
+  width: 44px; height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  cursor:pointer;
+}
+.nav-toggle span{
+  display:block;
+  width: 18px; height: 2px;
+  background: rgba(234,240,255,0.85);
+  margin: 5px auto;
+  border-radius: 2px;
+}
 
-    <!-- Websites & Links -->
-    <section id="links" class="section">
-      <h2>Websites & Links</h2>
-      <ul>
-        <li><a href="https://myblogstory.com">MyBlogStory.com</a></li>
-        <li><a href="https://amjobhunter.info">AmJobHunter.info</a></li>
-        <li><a href="https://github.com/keerthishkodali">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/keerthish">LinkedIn</a></li>
-      </ul>
-    </section>
+/* ====== Hero ====== */
+.hero{
+  padding: 44px 18px 18px;
+}
+.hero-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 1.35fr 0.65fr;
+  gap: 18px;
+  align-items: stretch;
+}
 
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:kodalikeerthish@gmail.com">kodalikeerthish@gmail.com</a></p>
-      <p>Phone: +1 (678)-796-6143</p>
-    </section>
-  </div>
+.hero-left, .hero-right{ width:100%; }
 
-  <!-- Footer -->
-  <footer class="footer">
-    © <script>document.write(new Date().getFullYear())</script> Keerthish Kodali. All rights reserved.
-  </footer>
-</body>
-</html>
+.pill{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.hero h1{
+  margin: 14px 0 10px;
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  font-weight: 900;
+}
+.tagline{
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.hero-actions{
+  display:flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(79,140,255,0.92), rgba(124,92,255,0.82));
+  color: white;
+  font-weight: 800;
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 16px 40px rgba(79,140,255,0.18);
+}
+.cta-button:hover{ text-decoration:none; filter: brightness(1.06); }
+
+.cta-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  font-weight: 800;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.cta-secondary:hover{ text-decoration:none; background: rgba(255,255,255,0.08); }
+
+.hero-stats{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 10px;
+}
+.stat{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 12px 12px;
+  box-shadow: var(--shadow2);
+}
+.stat-value{
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+.stat-label{
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted2);
+}
+
+.hero-card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+}
+.hero-card h3{
+  margin: 0 0 12px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  opacity: 0.95;
+}
+
+.quick-links{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+}
+.quick-links a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 10px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: var(--text);
+  font-weight: 800;
+}
+.quick-links a:hover{
+  text-decoration:none;
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-1px);
+}
+
+.focus-list{ display:flex; flex-direction: column; gap: 10px; }
+.focus-item{ display:flex; justify-content: space-between; align-items:center; color: var(--muted); font-weight: 700; }
+.badge{
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.badge.green{ background: rgba(57,217,138,0.12); color: rgba(150,255,210,0.95); }
+.badge.blue{ background: rgba(79,140,255,0.12); color: rgba(175,205,255,0.95); }
+
+/* ====== Main Sections ====== */
+.main-content{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 18px 56px;
+}
+
+.section{
+  margin-top: 22px;
+  padding: 22px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 18px;
+  box-shadow: var(--shadow2);
+}
+
+.section h2{
+  margin: 0 0 10px;
+  font-size: 22px;
+  letter-spacing: -0.4px;
+}
+.section p{
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+.section-sub{
+  margin-top: 6px;
+  color: var(--muted2);
+  font-size: 13px;
+}
+
+/* ====== Skills “WOW” Grid ====== */
+.skills-grid{
+  margin-top: 14px;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+
+.skill-card{
+  position: relative;
+  padding: 14px 14px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.30);
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+.skill-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.16);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+}
+
+.skill-card span:first-child{
+  font-weight: 800;
+  color: rgba(234,240,255,0.92);
+  letter-spacing: -0.2px;
+}
+.stars{
+  font-weight: 900;
+  color: rgba(255, 210, 105, 0.95);
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.skill-card.highlight::before{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(79,140,255,0.9), rgba(124,92,255,0.8));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* ====== Experience Cards ====== */
+.job-card{
+  margin-top: 14px;
+  padding: 16px 16px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.job-card h3{
+  margin:0 0 8px;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+.duration{
+  font-weight: 700;
+  color: var(--muted2);
+  font-size: 12px;
+  margin-left: 8px;
+}
+.job-card ul{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.job-card li{ margin: 6px 0; }
+
+/* ====== Highlights ====== */
+.highlights-grid{
+  margin-top: 12px;
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+.highlight-card{
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+}
+.highlight-card h3{
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 900;
+}
+.highlight-card p{
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ====== Education ====== */
+.edu-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+
+/* ====== Lists ====== */
+.certs{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+.subhead{ margin: 14px 0 0; opacity: .95; }
+.links-list{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+.links-list li{ margin: 8px 0; }
+.links-list a{ font-weight: 800; }
+
+/* ====== Footer ====== */
+.footer{
+  text-align:center;
+  color: rgba(234,240,255,0.55);
+  padding: 22px 12px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.20);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 980px){
+  .hero-inner{ grid-template-columns: 1fr; }
+  .hero h1{ font-size: 38px; }
+  .hero-stats{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .skills-grid{ grid-template-columns: 1fr; }
+  .highlights-grid{ grid-template-columns: 1fr; }
+  .edu-grid{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px){
+  .nav-toggle{ display: inline-flex; align-items:center; justify-content:center; }
+  .nav-links{
+    position: absolute;
+    top: 68px;
+    right: 12px;
+    left: 12px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 18px;
+    background: rgba(7,10,18,0.88);
+    border: 1px solid rgba(255,255,255,0.10);
+    display:none;
+  }
+  .nav-links.open{ display:flex; }
+  .nav-links a{ width: 100%; justify-content:center; }
+  .brand{ min-width: auto; }
+  .brand-role{ display:none; }
+}
