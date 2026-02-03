@@ -465,3 +465,24 @@ a:hover{ opacity: 0.95; text-decoration: underline; }
   .brand{ min-width: auto; }
   .brand-role{ display:none; }
 }
+
+/* ====== Added badges + case-study list ====== */
+.badge.purple{
+  background: rgba(124,92,255,0.14);
+  color: rgba(205,190,255,0.98);
+}
+
+.badge.gray{
+  background: rgba(234,240,255,0.10);
+  color: rgba(234,240,255,0.78);
+}
+
+/* mini list used inside case study cards */
+.mini-list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.mini-list li{ margin: 6px 0; }
+.mini-list b{ color: rgba(234,240,255,0.92); }
